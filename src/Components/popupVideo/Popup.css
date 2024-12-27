@@ -1,0 +1,222 @@
+/* Section Styling */
+.popupHeading
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1em;
+}
+
+.popupHeading h3
+{
+  color: #1c3d66;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.popupHeading p
+{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: -0.5em;
+  text-wrap: wrap;
+  text-align: left;
+}
+
+
+
+section {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+section h3 {
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  font-weight: 700;
+  text-align: left;
+}
+
+section span {
+  color: #1c3d66;
+}
+
+/* Main Container for Video Thumbnails */
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2em;
+}
+
+/* Individual Video Container */
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Video Thumbnail Styles */
+.videoThumbnail {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
+.videoThumbnailImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.playButton img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 70%;
+  padding: 0em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Video Player inside Modal */
+.videoPlayerModal {
+  width: 100%;
+  height: 40em;
+  border-radius: 15px;
+}
+
+/* Close Button in Modal */
+.closeButton {
+  position: absolute;
+  top: -0.5em;
+  right: -1.5em;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.closeButton:hover {
+  color: red;
+}
+
+@media (max-width: 1440px) {
+  .mainContainer {
+    grid-template-columns: repeat(2, 1fr);  /* 2 cards per row on medium screens */
+  }
+  section h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mainContainer {
+    grid-template-columns: repeat(2, 1fr);  /* 2 cards per row on medium screens */
+  }
+  .modalContent {
+    width: 100%;
+    max-width: 80%;
+  }
+  
+  /* Video Player inside Modal */
+  .videoPlayerModal {
+    width: 100%;
+    height: 35em;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    grid-template-columns: repeat(2,1fr);  /* 1 card per row on smaller screens */
+  }
+
+  .popupHeading
+  {
+    align-items: center;
+  }
+
+  .popupHeading p 
+  {
+    text-align: center;
+  }
+
+  .modalContent {
+    width: 100%;
+    max-width: 90%;
+    
+  }
+  
+  /* Video Player inside Modal */
+  .videoPlayerModal {
+    width: 100%;
+    height: 30em;
+  }
+
+  .closeButton
+  {
+    top: -1.5em;
+    right: 0em;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .mainContainer {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .modalContent {
+    width: 100%;
+    max-width: 90%;
+  }
+  
+  /* Video Player inside Modal */
+  .videoPlayerModal {
+    width: 100%;
+    height: 20em;
+  }
+
+  .closeButton
+  {
+    top: -1.5em;
+    right: 0em;
+  }
+
+}
+

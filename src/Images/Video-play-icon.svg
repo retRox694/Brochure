@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89.337" height="89.337" viewBox="0 0 89.337 89.337">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e5686e;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="play" transform="translate(-323 -1127)">
+    <path id="play-button" class="cls-1" d="M44.669,0A44.669,44.669,0,1,0,89.337,44.669,44.669,44.669,0,0,0,44.669,0ZM60.107,47.036,37.773,61A2.792,2.792,0,0,1,33.5,58.628V30.71a2.792,2.792,0,0,1,4.271-2.368L60.107,42.3a2.792,2.792,0,0,1,0,4.736Z" transform="translate(323 1127)"/>
+    <path id="play-button-2" data-name="play-button" class="cls-2" d="M51.445,39.864l-22,13.752a2.751,2.751,0,0,1-4.208-2.333V23.78a2.751,2.751,0,0,1,4.208-2.333l22,13.752a2.751,2.751,0,0,1,0,4.665Z" transform="translate(331.115 1134.304)"/>
+  </g>
+</svg>

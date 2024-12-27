@@ -1,0 +1,95 @@
+/* Styling for the entire section */
+section {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+}
+
+section h3 {
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  font-weight: 700;
+  text-align: center; /* Center the heading text */
+}
+
+section span {
+  color: #1c3d66;
+}
+
+/* Main container for the video section */
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* Container for individual video items */
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+/* Styling for the video name */
+.videoContainer p {
+  text-align: center;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  text-wrap: wrap;
+}
+
+/* Default video player styling */
+.videoPlayer {
+  width: 100%;
+  height: 12em;
+  border-radius: 15px;
+}
+
+/* Styling for the thumbnail container */
+.thumbnailContainer {
+  width: 100%;
+  height: 12em; /* Match the size of the video player */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Play button overlay on the thumbnail */
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Optional: Add hover effect on the thumbnail */
+.thumbnailContainer:hover {
+  transform: scale(1.05);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1460px) {
+  section h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoPlayer {
+    height: 8em; /* Adjust video height for smaller screens */
+  }
+
+  .thumbnailContainer {
+    height: 8em; /* Adjust thumbnail height for smaller screens */
+  }
+}

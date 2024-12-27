@@ -1,0 +1,63 @@
+[
+  {
+    "id": "1",
+    "name": "Branding-page",
+    "description": "Bulld a custom event page showcasing all details"
+  },
+  {
+    "id": "2",
+    "name": "Online Registration",
+    "description": "Streamline participant registration process"
+  },
+  {
+    "id": "3",
+    "name": "Enrolment Management",
+    "description": "Track participants enrolments efficiently"
+  },
+  {
+    "id": "4",
+    "name": "Automated Communication",
+    "description": "Send reminders & updates across multiple channels"
+  },
+  {
+    "id": "5",
+    "name": "Domestic & International Payments",
+    "description": "Offer flexible payment options for participants worldwide"
+  },
+  {
+    "id": "6",
+    "name": "Digital Certificates",
+    "description": "Generate & distribute certificates upon event completion"
+  },
+  {
+    "id": "7",
+    "name": "Skill Rubrics",
+    "description": "Use standardized criteria to evaluate performance"
+  },
+  {
+    "id": "8",
+    "name": "Judging Interface",
+    "description": "Invite jury members to assess participant performance"
+  },
+  {
+    "id": "9",
+    "name": "Gap Analysis Reports",
+    "description": "Provide participants with actionable performance insights"
+  },
+  {
+    "id": "10",
+    "name": "Operational Reports",
+    "description": "Access insights into event performance"
+  },
+  {
+    "id": "11",
+    "name": "Secure Platform",
+    "description": "Safeguard sensitive data with advanced security protocols"
+  },
+  {
+    "id": "12",
+    "name": "Scalable Infrastructure",
+    "description": "Seamlessly manage events of any size"
+  }
+]
+

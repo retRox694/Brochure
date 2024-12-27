@@ -1,0 +1,26 @@
+.footerBrochure
+{
+  background-color: #1c3d66;
+  color: #fff;
+  font-family: Poppins;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0.2em 0;
+  margin-top: 1em;
+  padding-top: 1em;
+  text-wrap: wrap;
+}
+
+.footerBrochure span
+{
+  color: #efaf4b;
+  font-weight: 600;
+}
+
+@media (max-width:678px)
+{
+  .footerBrochure
+  {
+    font-size: 0.85em;
+  }
+}

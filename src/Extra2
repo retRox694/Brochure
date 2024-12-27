@@ -1,0 +1,80 @@
+import "./Popup.css";
+import { Videos } from "../../Videos/Videos";
+import React from "react";
+
+export default function Popup() {
+  return (
+    <section>
+      <div>
+        <h3>Watch how Qrencia <span> benefited </span> experts</h3>
+      </div>
+      <div className="mainContainer">
+        {Videos.map((video) => {
+          return (
+            <div className="videoContainer" key={video.id}>
+              <iframe
+                className="videoPlayer"
+                src={`https://www.youtube.com/embed/${video.src}`}
+                title={video.name}
+                allowFullScreen
+              ></iframe>
+              <p>{video.name}</p> <br></br>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+// CSS FOR POPUP
+
+section {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+}
+
+section h3 {
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  font-weight: 700;
+}
+
+section span
+{
+  color: #1c3d66;
+}
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoContainer p {
+  text-align: left;
+  font-weight: 600;
+  font-family: Poppins;
+  text-wrap: wrap;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 12em;
+  border-radius: 15px;
+}
+
+@media (max-width: 1460px) {
+  section h3 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,98 @@
+<div className="card">
+  { data.slice(0,6).map(info => { return(
+  <div className="box" key="{info.id}">
+    <strong>{info.name}</strong> <br />
+    {info.description}
+  </div>
+  ) }) }
+</div>
+
+<!-- hnjkbnkj -->
+
+const [isFlipped, setIsFlipped] = useState(false); function flipCard() {
+setIsFlipped(!isFlipped); } return (
+<div>
+  <ReactCardFlip flipDirection="horizontal" isFlipped="{isFlipped}">
+    <div className="card" onClick="{flipCard}">
+      <h1>Hiiiiii</h1>
+    </div>
+    <div className="card card-back" onClick="{flipCard}">
+      <h1>Byeeeee</h1>
+    </div>
+  </ReactCardFlip>
+</div>
+);
+
+<!-- Slider Image Data -->
+
+<div className="slider_image">
+  <img src="{img2}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img3}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img4}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img5}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img6}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img7}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img8}" alt="slider_image" />
+</div>
+<div className="slider_image">
+  <img src="{img9}" alt="slider_image" />
+</div>
+
+<!-- fhewoehvfoaiwh -->
+frameBorder="0"
+ // allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" // 
+
+<!-- lwkcnajlvnblwa -->
+
+<div className="form-group col-xs-12 col-sm-12 col-md-6 col-lg-4">
+  <label className="formStyling">
+    Country<span>*</span>
+  </label>
+  <input
+    type="text"
+    name="country"
+    value={formData.country}
+    placeholder="Country Name"
+    onChange={handleChange}
+    onBlur={handleBlur}
+  />
+  {errors.country && <span className="error">{errors.country}</span>}
+</div>
+
+<!-- nkjbavwkjb -->
+
+<div className="form-group col-xs-12 col-sm-12 col-md-6 col-lg-4">
+  <label className="formStyling">
+    Country<span>*</span>
+  </label>
+  <select
+    name="country"
+    value={formData.country}
+    onChange={handleChange}
+    onBlur={handleBlur}
+    className="form-control"
+  >
+    <option value="" disabled>
+      Country Name
+    </option>
+    {countries.map((country, index) => (
+      <option key={index} value={country}>
+        {country}
+      </option>
+    ))}
+  </select>
+  {errors.country && <span className="error">{errors.country}</span>}
+</div>
