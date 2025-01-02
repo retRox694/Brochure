@@ -1,13 +1,11 @@
-.formHeading
-{
+/* .formHeading */
+.formHeading {
   display: flex;
   align-items: flex-start;
   margin-top: 1em;
 }
 
-
-.formHeading h3
-{
+.formHeading h3 {
   color: #1c3d66;
   font-family: Poppins;
   font-weight: 700;
@@ -15,9 +13,8 @@
   text-align: center;
 }
 
-
-form
-{
+/* Form Styles */
+form {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -28,22 +25,21 @@ form
   justify-content: space-evenly !important;
 }
 
-form p
-{
+form p {
   color: #363739;
   font-size: 0.9em;
   font-weight: 500 !important;
   margin-bottom: 1em;
 }
 
-.formSection
-{
+/* Form Section */
+.formSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
 }
 
-
+/* Form Label Styling */
 .formStyling {
   background-color: #fff;
   background-image: linear-gradient(to bottom, #fff, #f4f9fe);
@@ -55,80 +51,50 @@ form p
   top: 0.85em;
   left: 0.2em;
   z-index: 1;
-  /* margin-bottom: 0.7em; */
 }
 
-.formStyling span
-{
+/* Error handling for form labels */
+.formStyling span {
   color: #ff0000;
 }
 
-form input 
-{
+/* Input Styling */
+form input,
+.formInput input,
+.form-control {
   background-color: #f4f9fe;
   border: 1px solid #cbdef7;
   border-radius: 0.3em;
   font-size: 0.8em;
   height: 3em;
-  /* margin-top: -18px; */
   text-align: left;
   padding: 7px 6px;
   width: 100%;
 }
 
-.formInput input
-{
-  background-color: #f4f9fe;
-  border: 1px solid #cbdef7;
-  border-radius: 0.3em;
-  font-size: 0.8em;
-  height: 3em;
-  /* margin-top: -18px; */
-  text-align: left;
-  padding: 7px 6px;
-  width: 100%;
-}
-
-
-.form-control
-{
-  background-color: #f4f9fe;
-  border: 1px solid #cbdef7;
-  border-radius: 0.3em;
-  font-size: 0.8em;
-  height: 3em;
-  /* margin-top: -18px; */
-  text-align: left;
-  padding: 7px 6px;
-  width: 100%;
-}
-
-.selected-skills
-{
+/* Styling for selected skills section */
+.selected-skills {
   display: flex;
   gap: 0.5em;
 }
 
-.selected-skills p
-{
+.selected-skills p {
   font-size: 0.8em;
   text-wrap: nowrap;
 }
-.selectedSkill
-{
+
+.selectedSkill {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
 }
 
-
-
-.selectedSkill li
-{
+.selectedSkill li {
   list-style: none;
   font-size: 0.8em;
 }
 
+/* Button Styling */
 #subBtn {
   display: flex;
   justify-content: center;
@@ -147,8 +113,8 @@ form input
   font-family: Poppins, sans-serif !important;
 }
 
-.error
-{
+/* Error Styling */
+.error {
   color: #ff0000 !important;
   font-size: 0.75em !important;
   font-family: Poppins, sans-serif;

@@ -18,7 +18,7 @@ export default function FormComponent() {
     phoneNumber: "",
     instituteName: "",
     webLink: "",
-    interestedSkills: "",
+    interestedSkills: [],
   });
 
   const [errors, setErrors] = useState({});
@@ -109,7 +109,7 @@ export default function FormComponent() {
   };
 
   return (
-    <>
+    <div id="formSection">
       <div className="formHeading">
         <h3>{errorMessage.eoiFormHeading}</h3>
       </div>
@@ -288,9 +288,10 @@ export default function FormComponent() {
               styles={{
                 control: (baseStyles) => ({
                   ...baseStyles,
-                  height: "0em",
+                  height: "2.4em",
                   backgroundColor: "#f4f9fe",
                   overflow: "auto",
+                  borderColor: "var(--qrencia-formInput-border)" 
                 }),
                 dropdownIndicator: (baseStyles) => ({
                   display: "none",
@@ -361,6 +362,6 @@ export default function FormComponent() {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,115 @@
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: var(--qrencia-white);
+  color: var(--qrencia-white-background);
+  display: flex;
+  flex-direction: column; /* Stack the image and heading vertically */
+  justify-content: space-between; /* Spread out the image and heading */
+  border-radius: 0px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.cardImage {
+  width: 100%; /* Ensure the image takes up full width */
+  height: 70%; /* 70% of the card height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card h1 {
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
+  height: 30%; /* Ensure the heading takes up the remaining 30% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--qrencia-blue);
+  font-weight: 700;
+}
+
+.cardBack {
+  background-color: var(--qrencia-cyan);
+  color: var(--qrencia-blue);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+}
+
+.cardBack p {
+  font-size: 18px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 1440px) {
+  .displayCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .headingCards {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .displayCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .displayCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 12em;
+    height: 7em;
+  }
+
+  .card h1 {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .cardBack p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .headingCards h3 {
+    font-size: 1.1em;
+  }
+
+  .headingCards p {
+    font-size: 0.7em;
+  }
+
+  .displayCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+  }
+
+  .card {
+    width: 9em;
+    height: 5em;
+  }
+
+  .card h1 {
+    font-size: 0.6em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .cardBack p {
+    font-size: 0.5em;
+    text-align: center;
+  }
+}

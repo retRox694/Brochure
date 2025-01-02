@@ -1,12 +1,11 @@
 .formHeading {
   display: flex;
   align-items: flex-start;
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .formHeading h3 {
-  color: #1c3d66;
-  font-family: Poppins;
+  color: var(--qrencia-blue);
   font-weight: 700;
   font-size: 1.5em;
   text-align: center;
@@ -15,8 +14,8 @@
 form {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border: 1px solid #dedede;
+  background-color: var(--qrencia-white);
+  border: 1px solid var(--qrencia-white-border);
   border-radius: 0.5em;
   margin: 0.2em 0 1em 0;
   padding: 1em 2em 2em;
@@ -24,10 +23,9 @@ form {
 }
 
 form p {
-  color: #363739;
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: 500 !important;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
 }
 
 .formSection {
@@ -37,46 +35,44 @@ form p {
 }
 
 .formStyling {
-  background-color: #fff;
-  background-image: linear-gradient(to bottom, #fff, #f4f9fe);
+  background-color: var(--qrencia-white);
+  background-image: linear-gradient(to bottom, #ffffff, #f4f9fe);
   font-size: 0.8em;
-  font-weight: 500;
+  font-weight: bold;
   margin-left: 0;
   padding: 0 0.3em;
   position: relative;
   top: 0.85em;
   left: 0.2em;
   z-index: 1;
-  /* margin-bottom: 0.7em; */
 }
 
 .formStyling span {
-  color: #ff0000;
+  color: var(--qrencia-red);
 }
 
 form input {
-  background-color: #f4f9fe;
-  border: 1px solid #cbdef7;
+  background-color: var(--qrencia-formInput-bg);
+  border: 1px solid var(--qrencia-formInput-border);
   border-radius: 0.3em;
   font-size: 0.8em;
   height: 3em;
-  /* margin-top: -18px; */
   text-align: left;
   padding: 7px 6px;
   width: 100%;
 }
 
 .form-control {
-  background-color: #f4f9fe;
-  border: 1px solid #cbdef7;
+  background-color: var(--qrencia-formInput-bg);
+  border: 1px solid var(--qrencia-formInput-border);
   border-radius: 0.3em;
   font-size: 0.8em;
   height: 3em;
-  /* margin-top: -18px; */
   text-align: left;
   padding: 7px 6px;
   width: 100%;
 }
+
 
 .selected-skills {
   display: flex;
@@ -106,19 +102,53 @@ form input {
 
 #subBtn button {
   text-decoration: none;
-  background-color: #224b7f;
-  color: #fff;
+  background-color: var(--qrencia-blue);
+  color: var(--qrencia-white);
   padding: 0.5% 2%;
   text-align: center;
-  border: 1px solid #224b7f;
+  border: 1px solid var(--qrencia-blue);
   border-radius: 3px;
   font-size: 0.9em;
-  font-family: Poppins, sans-serif !important;
 }
 
 .error {
-  color: #ff0000 !important;
+  color: var(--qrencia-red) !important;
   font-size: 0.75em !important;
-  font-family: Poppins, sans-serif;
   font-weight: 400;
+}
+
+@media (max-width:576px)
+{
+
+  .formHeading
+  {
+    justify-content: center;
+  }
+
+  .formHeading h3
+  {
+    font-size: 1.1em;
+    margin-top: 0.5em;
+  }
+
+  .btn
+  {
+    padding: 0.5em 1em !important;
+    margin-top: 1em;
+    font-weight: 600;
+  }
+
+  form p
+  {
+    font-size: 0.8em;
+    font-weight: 700 !important;
+  }
+}
+
+@media (max-width:1440px)
+{
+  .formHeading
+  {
+    justify-content: center;
+  }
 }

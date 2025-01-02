@@ -1,5 +1,10 @@
 body
 {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 ;
   font-family: Poppins;
+}
+
+.App
+{
+  background-color: var(--qrencia-lightBlue-backgroung);
 }

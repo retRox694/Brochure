@@ -1,13 +1,45 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Poppins, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html
+{
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root
+{
+  --qrencia-cyan: #bff7f6;
+  --qrencia-blue: #1c3d66;
+  --heading-font-family: Poppins , sans-serif;
+  --qrencia-white: #ffffff;
+  --qrencia-orange: #efaf4b;
+  --qrencia-white-border: #dedede;
+  --qrencia-white-background: #f9f9f9; 
+  --qrencia-red: #ff0000;
+  --qrencia-formInput-bg: #f4f9fe;
+  --qrencia-formInput-border: #cbdef7;
+  --qrencia-black: #000000;
+  --qrencia-lightBlue-backgroung: #f5faff;
+  --qrencia-slider-bg: #79B7D0;
+
+  --card-bg-color: white; /* Clean white background */
+  --card-text-color: black; /* Black text */
+  --card-border-color: rgba(0, 0, 0, 0.15); /* Subtle black border */
+  --card-shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+  --card-hover-shadow-color: rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  --card-gradient-start: rgba(255, 255, 255, 1); /* Gradient start (white) */
+  --card-gradient-end: rgba(0, 0, 0, 0.05); /* Gradient end (subtle dark gray) */
+  --card-hover-gradient-start: rgba(255, 255, 255, 0.9); /* Lighter gradient start on hover */
+  --card-hover-gradient-end: rgba(0, 0, 0, 0.15); /* Slightly darker gradient end on hover */
+  --card-border-radius: 12px; /* Rounded corners */
+  --transition-duration: 0.3s; /* Smooth transition duration */
 }

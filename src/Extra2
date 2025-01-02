@@ -78,3 +78,104 @@ section span
     text-align: center;
   }
 }
+
+//card code initial
+
+import { useState } from "react";
+import styles from "./DisplayCards.css";
+import ReactCardFlip from "react-card-flip";
+import data from "../../Data.json";
+import { errorMessage } from "../../constants/errorMessages";
+
+export default function DisplayCards() {
+  const [flippedCards, setFlippedCards] = useState(
+    data.reduce((acc, curr) => ({ ...acc, [curr.id]: false }), {})
+  );
+
+  const flipCard = (id) => {
+    setFlippedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  return (
+    <>
+      <div className="headingCards">
+        <h3>{errorMessage.eoiOfferingsHeading}</h3>
+        <p>{errorMessage.eoiOfferings}</p>
+      </div>
+      <div className="displayCards">
+        {data.map((info) => (
+          <ReactCardFlip
+            key={info.id}
+            flipDirection="vertical"
+            isFlipped={flippedCards[info.id]}
+          >
+            <div className="card" onClick={() => flipCard(info.id)}>
+              <h1>{info.name}</h1>
+            </div>
+            <div className="card cardBack" onClick={() => flipCard(info.id)}>
+              <p>{info.description}</p>
+            </div>
+          </ReactCardFlip>
+        ))}
+      </div>
+    </>
+  );
+}
+ //cardback initial css
+
+ .cardBack {
+  background-color: var(--qrencia-cyan);
+  color: var(--qrencia-blue);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+}
+
+//Initial Display Cards
+
+import { useState } from "react";
+import "./DisplayCards.css";
+import ReactCardFlip from "react-card-flip";
+import { errorMessage } from "../../constants/errorMessages";
+import { details } from "../../constants/cardsDetails";
+
+export default function DisplayCards() {
+  const [flippedCards, setFlippedCards] = useState(
+    details.reduce((acc, curr) => ({ ...acc, [curr.id]: false }), {})
+  );
+
+  const flipCard = (id) => {
+    setFlippedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+  
+
+  return (
+    <>
+      <div className="headingCards">
+        <h3>{errorMessage.eoiOfferingsHeading}</h3>
+        <p>{errorMessage.eoiOfferings}</p>
+      </div>
+      <div className="displayCards">
+        {details.map((info) => (
+          <ReactCardFlip
+            key={info.id}
+            flipDirection="vertical"
+            isFlipped={flippedCards[info.id]}
+          >
+            <div className="card" onClick={() => flipCard(info.id)}>
+              <img className="cardImage" src={info.src} alt="Card Display" />
+
+              <h1>{info.name}</h1>
+            </div>
+            <div className="card cardBack" onClick={() => flipCard(info.id)}>
+              <p>{info.description}</p>
+            </div>
+          </ReactCardFlip>
+        ))}
+      </div>
+    </>
+  );
+}
+

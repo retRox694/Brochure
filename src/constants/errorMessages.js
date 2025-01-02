@@ -14,7 +14,10 @@ export const errorMessage = {
     "Invalid date of birth. Please select a date of birth that is in the past",
     eoiOfferingsHeading: "Our Offerings",
     eoiOfferings: "Access suite of features to seamlessly organize your skill events",
-    eoiFormHeading: "Ready to Join the Global Community of Experts?",
+    eoiFormHeading: "Join the Global Community of Experts",
+    eoiFormDesc: "Connect, Learn, and Grow with Like-minded Professionals Worldwide",
     eoiPopupHeading: "Our Impact",
-    eoiPopupMsg: "We have worked with national and international institutions to streamline extracurricular skills development"
+    eoiPopupMsg: "We have worked with national and international institutions to streamline extracurricular skills development",
+    eoiPassionHeading: "Discover your passion with Qrencia",
+    eoiPassionDesc:"Unleash Your Potential and Explore What Drives You",
 };

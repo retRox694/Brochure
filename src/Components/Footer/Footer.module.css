@@ -1,8 +1,7 @@
 .footerBrochure
 {
-  background-color: #1c3d66;
-  color: #fff;
-  font-family: Poppins;
+  background-color: var(--qrencia-blue);
+  color: var(--qrencia-white);
   text-align: center;
   font-size: 1.1em;
   padding: 0.2em 0;
@@ -13,7 +12,7 @@
 
 .footerBrochure span
 {
-  color: #efaf4b;
+  color: var(--qrencia-orange);
   font-weight: 600;
 }
 
@@ -21,6 +20,6 @@
 {
   .footerBrochure
   {
-    font-size: 0.85em;
+    font-size: 0.7em;
   }
 }

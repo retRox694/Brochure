@@ -1,42 +1,61 @@
 import { useState } from "react";
-import "./DisplayCards.css";
+import styles from "./DisplayCards.module.css"; 
 import ReactCardFlip from "react-card-flip";
-import data from "../../Data.json"; // Import your data
 import { errorMessage } from "../../constants/errorMessages";
+import { details } from "../../constants/cardsDetails";
 
 export default function DisplayCards() {
-  // This will hold the flip state for each card
   const [flippedCards, setFlippedCards] = useState(
-    data.reduce((acc, curr) => ({ ...acc, [curr.id]: false }), {})
+    details.reduce((acc, curr) => ({ ...acc, [curr.id]: false }), {})
   );
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // Function to flip individual card
   const flipCard = (id) => {
     setFlippedCards((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  const filteredCards = details.filter((card) =>
+    card.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-    <div className="headingCards">
-      <h3>{errorMessage.eoiOfferingsHeading}</h3>
-      <p>{errorMessage.eoiOfferings}</p>
-    </div>
-    <div className="displayCards">
-      {data.map((info) => (
-        <ReactCardFlip
-          key={info.id}
-          flipDirection="vertical"
-          isFlipped={flippedCards[info.id]}
-        >
-          <div className="card" onClick={() => flipCard(info.id)}>
-            <h1>{info.name}</h1>
-          </div>
-          <div className="card card-back" onClick={() => flipCard(info.id)}>
-            <p>{info.description}</p>
-          </div>
-        </ReactCardFlip>
-      ))}
-    </div>
+      <div className={styles.headingCards}>
+        <h3>{errorMessage.eoiOfferingsHeading}</h3>
+        <p>{errorMessage.eoiOfferings}</p>
+      </div>
+
+      <div className={styles.searchContainer}>
+        <input
+          type="text"
+          placeholder="Search cards by name..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button onClick={() => setSearchQuery("")}>Clear Search</button>
+      </div>
+
+      <div className={styles.displayCards}>
+        {filteredCards.length > 0 ? (
+          filteredCards.map((info) => (
+            <ReactCardFlip
+              key={info.id}
+              flipDirection="vertical"
+              isFlipped={flippedCards[info.id]}
+            >
+              <div className={styles.card} onClick={() => flipCard(info.id)}>
+                <img className={styles.cardImage} src={info.src} alt="Card Display" />
+                <h1>{info.name}</h1>
+              </div>
+              <div className={`${styles.card} ${styles.cardBack}`} onClick={() => flipCard(info.id)}>
+                <p>{info.description}</p>
+              </div>
+            </ReactCardFlip>
+          ))
+        ) : (
+          <p>No cards found matching your search.</p>
+        )}
+      </div>
     </>
   );
 }
