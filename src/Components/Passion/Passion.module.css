@@ -38,8 +38,8 @@
 }
 
 .selectedItem {
- transform: scale(1.05);
- border-bottom: 1px solid black;
+  transform: scale(1.05);
+  border-bottom: 1px solid black;
 }
 
 .passionItem h3 {
@@ -92,7 +92,7 @@
 }
 
 .passionImage:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .descriptionList {
@@ -103,7 +103,6 @@
   list-style-type: disc;
   padding-left: 15px;
   text-wrap: wrap;
-
 }
 
 .descriptionList li {
@@ -129,168 +128,129 @@
   width: 30%;
 }
 
-
-
 @media (max-width: 1440px) {
-
-  .description
-  {
+  .description {
     padding-left: 2em;
   }
 
-  .description img
-  {
+  .description img {
     width: 90%;
     height: auto;
   }
 }
 
 @media (max-width: 1200px) {
-
-  .passionHeading h3
-  {
+  .passionHeading h3 {
     text-align: center;
   }
 
-  .passionHeading p 
-  {
+  .passionHeading p {
     text-align: center;
   }
 
-  .passionNavbar
-  {
+  .passionNavbar {
     gap: 3em;
   }
 
-  .passionItem h3
-  {
+  .passionItem h3 {
     font-size: 0.9em;
   }
 
-  .passionImage
-  {
+  .passionImage {
     width: 2.5em;
     grid-area: 0;
   }
 
-  .description
-  {
+  .description {
     padding: 0;
   }
 
-  .descriptionInfo
-  {
+  .descriptionInfo {
     flex-direction: column;
     align-items: center;
   }
 
-  .descriptionText
-  {
+  .descriptionText {
     text-align: center;
   }
 
-  .descriptionList
-  {
+  .descriptionList {
     display: flex;
     justify-content: center;
   }
-  
-  .descriptionImage
-  {
+
+  .descriptionImage {
     max-width: 100%;
     margin-top: -3em;
   }
-
 }
 
 @media (max-width: 768px) {
-
-  .passionHeading h3
-  {
+  .passionHeading h3 {
     text-align: center;
   }
 
-  .passionHeading p 
-  {
+  .passionHeading p {
     text-align: center;
   }
 
-  .passionNavbar
-  {
+  .passionNavbar {
     gap: 2em;
   }
 
-  .passionItem h3
-  {
+  .passionItem h3 {
     font-size: 0.8em;
   }
 
-  .passionImage
-  {
+  .passionImage {
     width: 2em;
     grid-area: 0;
   }
-
-
 }
 
 @media (max-width: 576px) {
-  
-  .passionHeading h3
-  {
+  .passionHeading h3 {
     font-size: 1.1em;
     text-align: center;
   }
 
-  .passionHeading p 
-  {
-    font-size: 0.7em
+  .passionHeading p {
+    font-size: 0.7em;
   }
 
-  .passionNavbar
-  {
+  .passionNavbar {
     gap: 2.5em;
   }
 
-  .passionItem h3
-  {
+  .passionItem h3 {
     font-size: 0.6em;
   }
 
-  .passionImage
-  {
+  .passionImage {
     width: 2em;
     grid-area: 0;
   }
 
-  
-  .descriptionText
-  {
+  .descriptionText {
     font-size: 0.8em;
   }
 
-  .descriptionList
-  {
+  .descriptionList {
     display: flex;
     font-size: 0.8em;
   }
 
-  .descriptionList ul
-  {
+  .descriptionList ul {
     padding: 0;
   }
 }
 
-@media (max-width:468px)
-{
-  .passionNavbar
-  {
+@media (max-width: 468px) {
+  .passionNavbar {
     gap: 1.5em;
   }
 
-  .descriptionList
-  {
+  .descriptionList {
     padding-left: 1em;
   }
 }
-

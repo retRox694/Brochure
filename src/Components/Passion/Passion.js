@@ -7,10 +7,8 @@ export default function Passion() {
   const [selectedId, setSelectedId] = useState(passionDetails[0]?.id);
 
   const handleImageClick = (id) => {
-    if (selectedId === id) {
+    if (selectedId !== id) {
       setSelectedId(id);
-    } else {
-      setSelectedId(id); 
     }
   };
 
@@ -31,7 +29,8 @@ export default function Passion() {
       <div className={styles.passionMain}>
         <div className={styles.passionNavbar}>
           {passionDetails.map((item) => (
-            <div key={item.id} className={`${styles.passionItem} ${selectedId === item.id ? styles.selectedItem : ''}`} onClick={() => handleImageClick(item.id)}>
+            <div key={item.id} className={`${styles.passionItem} ${selectedId === item.id ? styles.selectedItem : ''}`} onClick={() => handleImageClick(item.id)} style={selectedId !== item.id ? { filter: "grayscale(100%)" } : {}}
+>
               <img
                 src={item.src}
                 alt={item.name}
